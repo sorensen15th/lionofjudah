@@ -1,0 +1,9 @@
+leader_traits = {
+	solomonic_dynasty = {
+		random = no
+		political_power_factor = 0.3
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

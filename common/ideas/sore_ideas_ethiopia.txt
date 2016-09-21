@@ -1,0 +1,196 @@
+#####################################################################
+#																	#
+#					       The Lion of Judah				  		#
+#																	#
+# 							Ethopian Ideas 							#
+#																 	#
+#####################################################################
+
+
+ideas = {
+	# MILITARY
+	country = {
+	
+	
+	
+	second_italo_ethiopian_war = {
+		allowed = {	original_tag = ETH	}
+		allowed_civil_war = {	always = yes	}
+		removal_cost = -1
+		picture = FRA_scw_intervention_nationalists_focus
+			
+			modifier = {
+				political_power_factor = -0.1
+				research_time_factor = 0.25
+				#production_speed_factor = -0.25
+			}
+	}
+	
+	
+	ETH_black_lion_corps = { #ind focus 1
+		allowed = {	always = no	}
+			removal_cost = -1
+			picture = generic_manpower_bonus
+			modifier = { conscription = 0.025}
+	}
+	
+	ETH_call_of_lion = {
+		allowed = {	always = no	}
+			removal_cost = -1
+			picture = generic_manpower_bonus		
+			modifier = { conscription = 0.05}	
+	}
+	
+	ETH_christmas_offensive_focus = {
+		allowed = {	always = no	}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				unity_factor = 0.30
+				army_core_attack_factor = 3.0
+				army_core_defence_factor = 1.0
+			}
+	}
+	
+	ETH_home_defense_focus = {
+		allowed = {	always = no	}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				unity_factor = 0.10
+				army_core_attack_factor = 1.0
+				army_core_defence_factor = 1.0
+			}
+	}
+	
+		ETH_swedish_red_cross = {
+		allowed = {	always = no	}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				#casualty_trickleback = 0.10
+				attrition = -0.10
+				experience_loss_factor = -0.5
+			}
+		}
+	
+		ETH_copy_german_design_focus = {
+			picture = generic_infantry_bonus
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.3 instant = yes
+				}
+			}
+		}
+		
+		ETH_hold_the_line = {
+			removal_cost = -1
+			allowed = {	always = no }
+			picture = generic_wall_line
+			modifier = {
+				max_dig_in_factor = 3.0	
+			}
+		}
+		
+		ETH_japan_advice = {
+			removal_cost = -1
+			allowed = {	always = no }
+			picture = generic_axis_build_infantry
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.5 instant = yes
+				}
+			}
+			modifier = {
+				attrition = -0.10
+			}
+		}
+		
+		ETH_lion_roar_focus = {
+		allowed = {	always = no	}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				unity_factor = 0.1
+				army_core_attack_factor = 3.0
+				army_core_defence_factor = 3.0
+				political_power_factor = 1.0
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.3 instant = yes
+				}
+			}
+		}
+		
+		ETH_lion_roar_focus_lesser = {
+		allowed = {	always = no	}
+			removal_cost = -1
+			picture = generic_morale_bonus
+			modifier = {
+				unity_factor = 0.2
+				army_core_attack_factor = 1.0
+				army_core_defence_factor = 1.0
+				research_time_factor = -0.1
+			}
+		}
+		
+		ETH_defensive_imperialism = {
+	
+		allowed = {	always = no}
+		allowed_civil_war = {always = yes}
+		removal_cost = -1
+		picture = generic_intel_bonus
+		
+			modifier = {		
+			justify_war_goal_time = -0.25
+			generate_wargoal_tension = -0.2
+			}
+		}
+		
+	}
+	
+	
+
+	high_command = {
+		# DO NOT REMOVE
+		ETH_wehib_pasha = {
+			picture = generic_army_europe_3
+			
+			allowed = 
+			{ 
+				original_tag = ETH	
+			}
+			available =  
+			{
+				NOT = { has_country_flag = purge_1_group_b }	
+				has_completed_focus = ETH_ferenghi
+			}
+
+			traits = { army_infantry_2 }
+			
+		}
+	}	
+
+	theorist = {
+		ETH_georges_deffontaine = {
+			
+			picture = generic_navy_europe_1
+			allowed = {
+				original_tag = ETH # Unlocked via focus
+
+			}
+			available = {has_completed_focus = ETH_foreign_advisors}
+			
+			cost = 50
+			
+			research_bonus = {
+				cat_mass_assault = 0.10
+			}
+			
+			traits = { mass_assault_expert }
+		}	
+	}
+
+}

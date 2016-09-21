@@ -1,0 +1,58 @@
+#####################################################################
+#																	#
+#					 Revenge of Prester John				  		#
+#																	#
+# 						ETHIOPIAN STATE 							#
+#																 	#
+#####################################################################
+
+state=
+{
+	id=271
+	name="STATE_271"
+	manpower = 16000000
+	resources={
+		steel= 8
+		aluminium= 4
+		tungsten= 4
+		rubber= 2
+	}
+	
+	state_category = large_town
+
+	history=
+	{
+		owner = ETH
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 1
+			#1984= {bunker = 5}
+			#2072 = {bunker = 5}
+			#5041= {bunker = 5}
+			#8062= {bunker = 5}
+			#12812= {bunker = 5}
+			#4995= {bunker = 5}
+		}
+		victory_points = { 
+			5010 5 
+		}
+		victory_points = { 
+			1984 1.0 
+		}
+		victory_points = { 
+			7980 1.0 
+		}
+		add_core_of = ETH
+
+		1936.6.1 = {
+			owner = ITA
+			controller = ITA
+		}
+	}
+
+	provinces=
+	{
+1984 2009 2040 2072 4954 4995 5010 5041 5097 7912 7944 7980 8019 8036 8062 10734 10775 12714 12757 12812 12856 13137 	}
+}
