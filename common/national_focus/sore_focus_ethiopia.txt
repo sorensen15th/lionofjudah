@@ -256,63 +256,123 @@ focus = {
 		}
 	}
 	
-	# focus = {
-		# id = ETH_rare_metals
-		# icon = GFX_goal_generic_construct_civ_factory
-		# prerequisite = { ETH_steel_industry }
-		# mutually_exclusive = { ETH_oil_industry }
-		# #text = "Land DEVELOPMENT"
-		# x = 1
-		# y = 7
-		# cost = 10
-		# ai_will_do = {
-			# factor = 70
-		# }	
-		# completion_reward = {
-			# add_resource = {
-				# type = tungsten
-				# amount = 4
-				# state = 271
-			# }
-			# add_resource = {
-				# type = aluminium
-				# amount = 4
-				# state = 271
-			# }
-			# add_resource = {
-				# type = chromium
-				# amount = 4
-				# state = 271
-			# }
-		# }
-	# }
+	focus = {
+		id = ETH_silk_road_test
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ETH_extra_research_slot_2  }
+		#text = "Land DEVELOPMENT"
+		x = 2
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 70
+		}
+		available = {
+		550 = is_owned_by = { ETH }
+		559 = is_owned_by = { ETH }
+		}
+		completion_reward = {
+			271 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			550 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+			559 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}	
+		}
+	}
 	
-	# focus = {
-		# id = ETH_oil_industry
-		# icon = GFX_goal_generic_construct_civ_factory
-		# prerequisite = { ETH_steel_industry }
-		# mutually_exclusive = { eth_rare_metals }
-		# #text = "Land DEVELOPMENT"
-		# x = 2
-		# y = 7
-		# cost = 10
-		# ai_will_do = {
-			# factor = 70
-		# }	
-		# completion_reward = {
-			# add_resource = {
-				# type = oil
-				# amount = 16
-				# state = 271
-			# }
-			# add_resource = {
-				# type = rubber
-				# amount = 4
-				# state = 271
-			# }
+	focus = {
+		id = ETH_steel_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = ETH_silk_road_test }
+		#text = "Land DEVELOPMENT"
+		x = 1
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 70
+		}	
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 16
+				state = 271
+			}
+		}
+	}
+	
+	focus = {
+		id = ETH_rare_metals
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ETH_steel_industry }
+		mutually_exclusive = { focus = ETH_oil_industry }
+		#text = "Land DEVELOPMENT"
+		x = 0
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 70
+		}	
+		completion_reward = {
+			add_resource = {
+				type = tungsten
+				amount = 4
+				state = 271
+			}
+			add_resource = {
+				type = aluminium
+				amount = 4
+				state = 271
+			}
+			add_resource = {
+				type = chromium
+				amount = 4
+				state = 271
+			}
+		}
+	}
+	
+	focus = {
+		id = ETH_oil_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = ETH_steel_industry }
+		mutually_exclusive = { focus = ETH_rare_metals }
+		#text = "Land DEVELOPMENT"
+		x = 2
+		y = 8
+		cost = 10
+		ai_will_do = {
+			factor = 70
+		}	
+		completion_reward = {
+			add_resource = {
+				type = oil
+				amount = 16
+				state = 271
+			}
+			add_resource = {
+				type = rubber
+				amount = 4
+				state = 271
+			}
 			
-		# }
-	# }
+		}
+	}
 	
 	##### END DEVELOPMENT FOCUS ######
 	
@@ -564,7 +624,7 @@ focus = {
 		}
 		completion_reward = {
 			add_political_power = 120
-			add_named_threat = { threat = 1 name = italo_abbisinian_war }
+			add_named_threat = { threat = 15 name = italo_abbisinian_war }
 			USA = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			JAP = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
 			GER = {	add_opinion_modifier = { target = ITA modifier = unprovoked_aggression } }
@@ -651,6 +711,27 @@ focus = {
 		}
 	}
 	
+	focus = {
+		id = ETH_secure_seuz
+		icon = GFX_goal_generic_major_alliance
+		#text = "Secure the Seuz"
+		prerequisite = { focus = ETH_german_design }
+		x = 5
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_state_core = 551
+			add_state_core = 456
+			add_state_core = 457
+			add_state_core = 446
+			add_state_core = 447
+			add_state_core = 453
+			}
+	}
+	
 ##JAPANESE TREE BRANCH
 	
 	focus = {
@@ -708,6 +789,29 @@ focus = {
 			country_event = { id = ethiopia.1003 days = 1 }
 			}
 	}
+	
+	focus = {
+		id = ETH_sea_apart
+		icon = GFX_goal_generic_major_alliance
+		#text = "Island Hop"
+		prerequisite = { focus = ETH_royal_wedding }
+		x = 11
+		y = 6
+		cost = 10
+		available = {
+		JAP = is_in_faction_with = { ETH }
+			}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			
+			add_state_core = 709
+			add_state_core = 710
+			add_state_core = 712
+			add_state_core = 711
+			}
+	}
 
 ## Mutual Second Wind TREE	
 	
@@ -761,6 +865,7 @@ focus = {
 		cost = 3
 		ai_will_do = {	factor = 10 }	
 		completion_reward = {
+			add_named_threat = { threat = -10 name = italo_ethiopian_war }
 			remove_ideas = second_italo_ethiopian_war
 			remove_ideas = ETH_hold_the_line
 			remove_ideas = ETH_swedish_red_cross
@@ -854,9 +959,8 @@ focus = {
 			}
 			550 = {
 				add_building_construction = {
-					type = naval_base
+					type = dockyard
 					level = 2
-					province = 12766
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 4
@@ -942,9 +1046,8 @@ focus = {
 			}
 			559 = {
 				add_building_construction = {
-					type = naval_base
+					type = dockyard
 					level = 2
-					province = 1966
 					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 4
@@ -1104,7 +1207,7 @@ focus = {
 		prerequisite = { 
 		focus = ETH_demand_summit
 		}
-		x = 10
+		x = 8
 		y = 8
 		cost = 10
 
@@ -1125,7 +1228,7 @@ focus = {
 		#text = "Reclaim the Kingdom of Aksum"
 		prerequisite = { focus =  ETH_anti_colonial_dogma }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 10
+		x = 8
 		y = 9
 		cost = 10
 		ai_will_do = {
@@ -1160,7 +1263,7 @@ focus = {
 			294 = { is_owned_by = ETH }
 		} 
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 10
+		x = 8
 		y = 10
 		cost = 10
 		ai_will_do = {
@@ -1187,7 +1290,7 @@ focus = {
 		will_lead_to_war_with = YEM
 		prerequisite = { focus =  ETH_reclaim_aksum }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 8
+		x = 6
 		y = 9
 		cost = 10
 		ai_will_do = {
@@ -1211,7 +1314,7 @@ focus = {
 		#text = "Demand British Somalia"
 		prerequisite = { focus =  ETH_reclaim_aksum }
 		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = 12
+		x = 10
 		y = 9
 		cost = 10
 		ai_will_do = {
@@ -1242,8 +1345,8 @@ focus = {
 		prerequisite = { focus =  ETH_death_to_saudis}
 		prerequisite = { focus = ETH_demand_british_somalia}
 		icon = GFX_goal_generic_attack_allies
-		x = 12
-		y = 10
+		x = 9
+		y = 11
 		cost = 10
 		ai_will_do = {
 			factor = 10
@@ -1273,47 +1376,6 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = ETH_silk_road_test
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = {  }
-		#text = "Land DEVELOPMENT"
-		x = 2
-		y = 6
-		cost = 10
-		ai_will_do = {
-			factor = 70
-		}	
-		completion_reward = {
-			271 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-				}
-			}	
-		}
-	}
-	
-	focus = {
-		id = ETH_steel_industry
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { ETH_silk_road_test }
-		#text = "Land DEVELOPMENT"
-		x = 2
-		y = 7
-		cost = 10
-		ai_will_do = {
-			factor = 70
-		}	
-		completion_reward = {
-			add_resource = {
-				type = steel
-				amount = 16
-				state = 271
-			}
-		}
-	}
 	
 }
 	

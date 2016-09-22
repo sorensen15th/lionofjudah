@@ -251,7 +251,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		ai_chance = { base = 10 }
+		ai_chance = { base = 1 }
 		name = "We must rush production!"
 		add_resource = {
 				type = steel
@@ -278,7 +278,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		ai_chance = { base = 10 }
+		ai_chance = { base = 1 }
 		name = "We must rush production!"
 		ETH = {
 			add_equipment_to_stockpile = {
