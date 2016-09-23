@@ -261,7 +261,7 @@ focus = {
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = ETH_extra_research_slot_2  }
 		#text = "Land DEVELOPMENT"
-		x = 2
+		x = 1
 		y = 6
 		cost = 10
 		ai_will_do = {

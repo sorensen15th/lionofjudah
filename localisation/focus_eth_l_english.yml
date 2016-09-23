@@ -90,6 +90,8 @@ l_english:
  ETH_modern_navy_desc:0 "Now that we have secure and developed our ports, we can invest in ship designs based off other major nations. With the limited capabilities of our industry, we should invest all resources into Destroyers."
  ETH_amphibious_operations:0 "Amphibious Operations"
  ETH_amphibious_operations_desc:0 "Amphibious warfare will be required if we ever desire to leave Africa. We should invest resources into studying the role transport ships and supporting navy plays in a succesfuly beachhead."
+ ETH_carrier_primacy:0 "Carrier Primacy"
+ ETH_carrier_primacy_desc:0 "Carrier warfare is the future of naval combat, and we must invest resources into developing our own designs."
  ETH_battleship_primacy:0 "Battleship Primacy"
  ETH_battleship_primacy_desc:0 "If we plan to contend with the other navies of the world we must develop battleship designs."
  ETH_silk_road_test:0 "Rebuild the Silk Road"
