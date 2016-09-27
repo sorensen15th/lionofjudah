@@ -933,6 +933,113 @@ focus = {
 		}
 	}
 
+### Air DOCTRINE ###
+
+focus = {
+		id = ETH_modern_airforce
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 24
+		y = 0
+		cost = 10
+		prerequisite = { focus = LIB_develop_airforce }
+		ai_will_do = {
+			factor = 10
+		}
+		
+		available = {
+			AND = {
+				559 = { is_owned_by = ETH }
+				550 = { is_owned_by = ETH }
+			}
+		} 
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_bonus
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 4
+				technology = early_figher
+				technology = figher1
+				technology = cas1
+				technology = naval_bomber1
+			}
+		}
+	}
+
+focus = {
+		id = ETH_airbase_eritea
+		prerequisite = { focus = ETH_modern_airforce }
+		icon = GFX_goal_generic_construct_naval_dockyard
+		#text = "freeport of monrovia
+		x = 22
+		y = 1
+		cost = 10
+		completion_reward = {
+			550 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1				
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+focus = {
+		id = ETH_airbase_somalia
+		prerequisite = { focus = ETH_modern_airforce }
+		icon = GFX_goal_generic_construct_naval_dockyard
+		#text = "freeport of monrovia
+		x = 24
+		y = 1
+		cost = 10
+		completion_reward = {
+			559 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 1				
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+focus = {
+		id = ETH_develop_airforce
+		icon = GFX_goal_generic_build_airforce
+		prerequisite = { focus = ETH_airbase_somalia }
+		prerequisite = { focus = ETH_airbase_eritea }
+		x = 24
+		y = 3
+		cost = 10
+
+		completion_reward = {
+			air_experience = 25
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	
+
+		
+	
 	## Develop Somalia and eritrea
 	
 focus = {
@@ -1376,7 +1483,6 @@ focus = {
 		}
 	}
 
-	
 }
 	
 	
